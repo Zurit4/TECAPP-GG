@@ -35,7 +35,7 @@ const ExternalLinkModal = forwardRef((props, ref) => {
     <Modal visible={visible} transparent animationType="fade" onRequestClose={() => setVisible(false)}>
       <View style={styles.backdrop}>
         <View style={styles.modal}>
-          <Image source={require('./img/ittuxlogo.png')} style={styles.logo} resizeMode="contain" />
+          <Image source={require('./img/ittuxtr.png')} style={styles.logo} resizeMode="contain" />
           <Text style={styles.title}>Vas a salir de la aplicación</Text>
           <Text style={styles.message}>Estás a punto de visitar:</Text>
           <Text style={styles.urlText}>{hostOrUrl(url)}</Text>

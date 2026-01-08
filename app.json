@@ -2,13 +2,13 @@
   "expo": {
     "name": "Aspirantes Ittux",
     "slug": "ittux-aspirantes",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "orientation": "portrait",
     "icon": "./assets/ittuxlogo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/ittuxicono.png",
+      "image": "./assets/tecnmlogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,9 +17,9 @@
     },
     "android": {
       "package": "com.ittux.aspirantes",
-      "versionCode": 4,
+      "versionCode": 5,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/tecnmlogo.png",
+        "foregroundImage": "./assets/ittuxlogo.png",
         "backgroundColor": "#ffffff"
       }
     },
