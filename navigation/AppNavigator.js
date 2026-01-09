@@ -13,6 +13,7 @@ import AdmissionExamScreen from '../screens/AdmissionExamScreen';
 import HomogenizationScreen from '../screens/HomogenizationScreen';
 import EnrollmentScreen from '../screens/EnrollmentScreen';
 import ContactScreen from '../screens/ContactScreen';
+import CareerGuideScreen from '../screens/CareerGuideScreen';
 
 const Stack = createStackNavigator();
 
@@ -43,6 +44,11 @@ export default function AppNavigator() {
         name="Announcement" 
         component={AnnouncementScreen} 
         options={{ title: 'Convocatoria' }} 
+      />
+      <Stack.Screen 
+        name="CareerGuide" 
+        component={CareerGuideScreen} 
+        options={{ title: 'Guía de Carreras' }} 
       />
       <Stack.Screen 
         name="EducationalOffer" 

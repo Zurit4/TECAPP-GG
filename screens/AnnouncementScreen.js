@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Animated,
 } from 'react-native';
+import { BaseStyles } from '../styles/BaseStyles';
 import ExternalLinkModal from '../components/ExternalLinkModal';
 
 export default function AnnouncementScreen() {
@@ -16,7 +17,7 @@ export default function AnnouncementScreen() {
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
-      duration: 800,
+      duration: 700,
       useNativeDriver: true,
     }).start();
   }, []);
@@ -24,76 +25,87 @@ export default function AnnouncementScreen() {
   const handleLinkPress = (url) => modalRef.current.open(url);
 
   return (
-    <Animated.View style={[styles.container, { opacity: fadeAnim }]}>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <Text style={styles.title}>Convocatoria de Admisión 2025</Text>
+    <Animated.View style={[BaseStyles.container, { opacity: fadeAnim }]}>
+      <ScrollView contentContainerStyle={BaseStyles.scrollContainer}>
+        <Text style={BaseStyles.title}>Convocatoria de Admisión 2025</Text>
 
-        <View style={styles.card}>
-          <Text style={styles.sectionTitle}>Semestre Agosto - Diciembre 2025</Text>
-          <Text style={styles.text}>
-            El Tecnológico Nacional de México Campus Tuxtepec invita a todos los interesados a participar en el proceso de admisión al semestre Agosto-Diciembre 2025.
+        {/* HERO */}
+        <View style={styles.heroCard}>
+          <Text style={styles.heroTitle}>Semestre</Text>
+          <Text style={styles.heroSubtitle}>Agosto – Diciembre 2025</Text>
+          <Text style={styles.heroText}>
+            El Tecnológico Nacional de México Campus Tuxtepec invita a los aspirantes
+            a participar en el proceso de admisión.
           </Text>
         </View>
 
-        <View style={styles.card}>
-          <Text style={styles.sectionTitle}>Fechas importantes</Text>
-          <View style={styles.bulletBox}>
-            <Text style={styles.bullet}>•</Text>
-            <Text style={styles.text}>Registro y pago: 24 febrero - 11 junio 2025</Text>
+        {/* FECHAS IMPORTANTES */}
+        <Text style={styles.blockTitle}>Fechas importantes</Text>
+
+        {[
+          ['Registro y pago', '24 febrero – 11 junio 2025'],
+          ['Examen de admisión', '18 julio 2025'],
+          ['Resultados', '5 agosto 2025'],
+          ['Inscripciones', '5 – 22 agosto 2025'],
+          ['Inicio de clases', '25 agosto 2025'],
+        ].map((item, index) => (
+          <View key={index} style={styles.dateCard}>
+            <View style={styles.dateDot} />
+            <View style={{ flex: 1 }}>
+              <Text style={styles.dateTitle}>{item[0]}</Text>
+              <Text style={styles.dateText}>{item[1]}</Text>
+            </View>
           </View>
-          <View style={styles.bulletBox}>
-            <Text style={styles.bullet}>•</Text>
-            <Text style={styles.text}>Examen de admisión: 18 julio 2025</Text>
-          </View>
-          <View style={styles.bulletBox}>
-            <Text style={styles.bullet}>•</Text>
-            <Text style={styles.text}>Resultados: 5 agosto 2025</Text>
-          </View>
-          <View style={styles.bulletBox}>
-            <Text style={styles.bullet}>•</Text>
-            <Text style={styles.text}>Inscripciones: 5 - 22 agosto 2025</Text>
-          </View>
-          <View style={styles.bulletBox}>
-            <Text style={styles.bullet}>•</Text>
-            <Text style={styles.text}>Inicio de clases: 25 agosto 2025</Text>
-          </View>
+        ))}
+
+        {/* REQUISITOS */}
+        <Text style={styles.blockTitle}>Requisitos principales</Text>
+
+        <View style={styles.requirementsBox}>
+          {[
+            'Correo electrónico Gmail',
+            'CURP verificada',
+            'Documentación completa',
+          ].map((req, index) => (
+            <View key={index} style={styles.requirementChip}>
+              <Text style={styles.requirementText}>✓ {req}</Text>
+            </View>
+          ))}
         </View>
 
-        <View style={styles.card}>
-          <Text style={styles.sectionTitle}>Requisitos principales</Text>
-          <Text style={styles.text}>• Correo electrónico Gmail</Text>
-          <Text style={styles.text}>• CURP verificada</Text>
-          <Text style={styles.text}>• Documentación completa</Text>
-        </View>
-
-{/* Sección CURP */}
-
-        <View style={styles.curpCard}>
-          <Text style={styles.curpTitle}>Consulta tu CURP</Text>
-          <Text style={styles.curpDesc}>
-            Puedes obtener o verificar tu CURP directamente desde el portal
-            oficial del Gobierno de México.
+        {/* CURP */}
+        <View style={BaseStyles.curpCard}>
+          <Text style={BaseStyles.curpTitle}>Consulta tu CURP</Text>
+          <Text style={BaseStyles.curpDesc}>
+            Obtén o verifica tu CURP directamente desde el portal oficial del Gobierno de México.
           </Text>
           <TouchableOpacity
-            style={styles.curpBtn}
+            style={BaseStyles.curpBtn}
             onPress={() => handleLinkPress('https://www.gob.mx/curp/')}
           >
-            <Text style={styles.curpBtnText}>Consultar CURP</Text>
+            <Text style={BaseStyles.curpBtnText}>Consultar CURP</Text>
           </TouchableOpacity>
         </View>
-        <Text></Text>  
-        <View style={styles.cardHighlight}>
-          <Text style={styles.highlightTitle}>Importante</Text>
-          <Text style={styles.highlightText}>
-            Revisa la convocatoria completa para conocer todos los requisitos, fechas y pasos del proceso.
+
+        {/* AVISO */}
+        <View style={BaseStyles.highlightBox}>
+          <Text style={BaseStyles.highlightTitle}>Importante</Text>
+          <Text style={BaseStyles.highlightText}>
+            Revisa la convocatoria completa para conocer todos los requisitos,
+            fechas y pasos del proceso de admisión.
           </Text>
         </View>
-      
+
+        {/* CTA FINAL */}
         <TouchableOpacity
-          style={styles.linkButton}
-          onPress={() => handleLinkPress('https://www.tuxtepec.tecnm.mx/procedimiento.html')}
+          style={[BaseStyles.linkButton, { marginTop: 10 }]}
+          onPress={() =>
+            handleLinkPress('https://www.tuxtepec.tecnm.mx/procedimiento.html')
+          }
         >
-          <Text style={styles.linkButtonText}>Ver convocatoria completa</Text>
+          <Text style={BaseStyles.linkButtonText}>
+            Ver convocatoria completa
+          </Text>
         </TouchableOpacity>
 
         <ExternalLinkModal ref={modalRef} />
@@ -103,76 +115,81 @@ export default function AnnouncementScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F4F8FB' },
-  scrollContainer: { padding: 20, paddingBottom: 60 },
-  title: {
-    fontSize: 26,
-    color: '#2C5F8B',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  card: {
-    backgroundColor: '#FFF',
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#2C5F8B',
-    padding: 18,
-    marginBottom: 15,
-    elevation: 4,
-  },
-  sectionTitle: { fontSize: 18, fontWeight: '700', color: '#2C5F8B', marginBottom: 10 },
-  text: { fontSize: 15, color: '#333', lineHeight: 22, marginBottom: 4 },
-  bulletBox: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 6 },
-  bullet: { fontSize: 18, color: '#2C5F8B', marginRight: 8 },
-  cardHighlight: {
-    backgroundColor: '#FFF3C4',
-    borderRadius: 12,
-    padding: 16,
-    borderWidth: 1.5,
-    borderColor: '#FFC107',
-    marginBottom: 20,
-  },
-  highlightTitle: { fontSize: 18, fontWeight: '700', color: '#856404', marginBottom: 6 },
-  highlightText: { fontSize: 15, color: '#333' },
-  linkButton: {
+  heroCard: {
     backgroundColor: '#2C5F8B',
-    paddingVertical: 12,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  linkButtonText: { color: '#FFF', fontSize: 16, fontWeight: 'bold' },
-    curpCard: {
-    backgroundColor: '#FFF',
-    borderRadius: 12,
+    borderRadius: 16,
     padding: 20,
-    borderWidth: 2,
-    borderColor: '#3A7D44',
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 6,
-    elevation: 4,
+    marginBottom: 25,
+    elevation: 5,
   },
-  curpTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#3A7D44',
-    marginBottom: 8,
+  heroTitle: {
+    fontSize: 14,
+    color: '#E8F4F8',
+    textTransform: 'uppercase',
+    fontWeight: '600',
   },
-  curpDesc: {
-    fontSize: 15,
-    color: '#333',
-    marginBottom: 12,
-  },
-  curpBtn: {
-    backgroundColor: '#3A7D44',
-    paddingVertical: 10,
-    borderRadius: 8,
-    alignItems: 'center',
-  },
-  curpBtnText: {
+  heroSubtitle: {
+    fontSize: 22,
     color: '#FFF',
     fontWeight: 'bold',
-    fontSize: 16,
+    marginBottom: 10,
+  },
+  heroText: {
+    fontSize: 15,
+    color: '#E8F4F8',
+    lineHeight: 22,
+  },
+  blockTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#2C5F8B',
+    marginBottom: 12,
+  },
+  dateCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFF',
+    borderRadius: 12,
+    padding: 14,
+    marginBottom: 10,
+    borderLeftWidth: 5,
+    borderLeftColor: '#3A7D44',
+    elevation: 3,
+  },
+  dateDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: '#3A7D44',
+    marginRight: 12,
+  },
+  dateTitle: {
+    fontSize: 15,
+    fontWeight: '700',
+    color: '#2C5F8B',
+  },
+  dateText: {
+    fontSize: 14,
+    color: '#333',
+  },
+  requirementsBox: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginBottom: 20,
+  },
+  requirementChip: {
+    backgroundColor: '#E9F6EC',
+    borderRadius: 20,
+    paddingVertical: 8,
+    paddingHorizontal: 14,
+    marginRight: 10,
+    marginBottom: 10,
+    borderWidth: 1.5,
+    borderColor: '#3A7D44',
+  },
+  requirementText: {
+    fontSize: 14,
+    color: '#2C5F8B',
+    fontWeight: '600',
   },
 });

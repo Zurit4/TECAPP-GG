@@ -2,13 +2,13 @@
   "expo": {
     "name": "Aspirantes Ittux",
     "slug": "ittux-aspirantes",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "orientation": "portrait",
-    "icon": "./assets/ittuxlogo.png",
+    "icon": "./assets/iconotuxx.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/tecnmlogo.png",
+      "image": "./assets/aztecalogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,9 +17,9 @@
     },
     "android": {
       "package": "com.ittux.aspirantes",
-      "versionCode": 5,
+      "versionCode": 6,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/ittuxlogo.png",
+        "foregroundImage": "./assets/iconotuxx.png",
         "backgroundColor": "#ffffff"
       }
     },
@@ -28,10 +28,13 @@
         "projectId": "92b9d299-f5ad-4494-84ee-2ca0b869fa55"
       }
     },
-    "owner": "hawuelo"
+    "owner": "hawuelo",
+    "plugins": [
+      "expo-font"
+    ]
   },
   "web": {
-    "favicon": "./assets/tecnmlogo.png"
+    "favicon": "./assets/aztecalogo.png"
   },
   "extra": {
     "eas": {
