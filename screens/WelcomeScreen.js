@@ -50,12 +50,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Bold',
     color: '#1a36a9ff',
-    marginBottom: 10,
+    marginBottom: 20,
     textAlign: 'center',
   },
   subtitle: {
+    fontFamily: 'Montserrat-SemiBold',
     fontSize: 20,
     color: '#1a36a9ff',
     textAlign: 'center',
@@ -70,12 +71,12 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     minWidth: 150,
     alignItems: 'center',
-    borderWidth: 4,
+    borderWidth: 5,
     borderColor: '#1a36a9ff',
   },
   buttonText: {
     fontSize: 18,
     color: '#FFFFFF',
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-SemiBold',
   },
 });

@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     padding: 14,
     marginBottom: 18,
-    marginHorizontal: 16, 
+    marginHorizontal: 16,
     borderWidth: 3,
     borderColor: '#1B8E36',
     shadowColor: '#000',
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   cardExpanded: {
-    borderColor: '#2C5F8B', // Azul al expandirse
+    borderColor: '#2C5F8B',
     elevation: 6,
     shadowOpacity: 0.15,
   },
@@ -96,39 +96,54 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
+  /* 🔤 TÍTULO DE LA CARRERA */
   title: {
+    fontFamily: 'Montserrat-Bold',
     fontSize: 17,
-    fontWeight: 'bold',
     color: '#2C5F8B',
     flex: 1,
     marginRight: 10,
   },
+
+  /* 🔽 VER MÁS / VER MENOS */
   toggleText: {
+    fontFamily: 'Montserrat-SemiBold',
     color: '#1B8E36',
-    fontWeight: 'bold',
     fontSize: 14,
   },
+
+  /* 📝 DESCRIPCIÓN */
   description: {
+    fontFamily: 'Montserrat-Regular',
     fontSize: 14,
     color: '#444',
     marginTop: 6,
+    lineHeight: 21,
   },
+
+  /* 📦 DETALLES */
   detailsBox: {
     marginTop: 12,
-    backgroundColor: '#E9F6EC', // verde muy suave
+    backgroundColor: '#E9F6EC',
     borderRadius: 10,
     padding: 12,
     borderWidth: 3,
     borderColor: '#1B8E36',
-    marginHorizontal: 5, 
+    marginHorizontal: 5,
   },
+
   detail: {
+    fontFamily: 'Montserrat-Regular',
     fontSize: 13.5,
     marginBottom: 4,
     color: '#333',
+    lineHeight: 20,
   },
+
   detailLabel: {
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-SemiBold',
     color: '#2C5F8B',
   },
 });
+

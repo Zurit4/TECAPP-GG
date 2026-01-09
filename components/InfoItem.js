@@ -16,7 +16,10 @@ export default function InfoItem({ text }) {
 }
 
 const styles = StyleSheet.create({
-  row: { flexDirection: 'row', alignItems: 'center', marginBottom: 10 },
-  dot: { width: 12, height: 12, borderRadius: 6, backgroundColor: '#3A7D44', marginRight: 10 },
-  text: { color: '#333', fontSize: 15, flex: 1 },
+  text: {
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 15,
+    color: '#333',
+    lineHeight: 22,
+  },
 });
