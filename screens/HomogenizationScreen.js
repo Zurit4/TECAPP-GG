@@ -52,15 +52,15 @@ export default function HomogenizationScreen() {
         {/* FECHAS */}
         <View style={BaseStyles.card}>
           <Text style={BaseStyles.sectionTitle}>Fechas importantes</Text>
-          <InfoItem text="Pago del curso: 24 febrero – 4 julio 2025 ($1,500.00 MXN)" />
-          <InfoItem text="Curso presencial: 7 – 18 julio 2025" />
+          <InfoItem text="Pago del curso: 23 febrero – 3 julio 2026 ($1,500.00 MXN)" />
+          <InfoItem text="Curso presencial: 6 – 17 julio 2026" />
         </View>
 
         {/* DURACIÓN */}
         <View style={BaseStyles.card}>
           <Text style={BaseStyles.sectionTitle}>Duración</Text>
           <Text style={BaseStyles.text}>
-            El curso se llevará a cabo del 7 al 18 de julio de 2025 y la
+            El curso se llevará a cabo del 6 al 17 de julio de 2026 y la
             asistencia es presencial y obligatoria.
           </Text>
         </View>
