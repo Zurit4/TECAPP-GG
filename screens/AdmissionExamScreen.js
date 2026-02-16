@@ -44,10 +44,11 @@ export default function AdmissionExamScreen() {
       <View style={BaseStyles.card}>
         <Text style={BaseStyles.sectionTitle}>Información importante</Text>
 
-        <InfoItem text="Fecha del examen: 18 de julio de 2025" />
+        <InfoItem text="Fecha del examen: 11 de julio de 2026." />
+        <InfoItem text="Horario del examen: 17:00 a 20:00 hrs." />
         <InfoItem text="Plataforma: tuxtepec.evaluatec.tecnm.mx" />
         <InfoItem text="Disponible únicamente un día antes del examen" />
-        <InfoItem text="Resultados: 5 de agosto de 2025" />
+        <InfoItem text="Resultados: pendiente a fechas" />
       </View>
 
       {/* REQUISITOS */}

@@ -50,17 +50,17 @@ export default function EnrollmentScreen() {
 
           <View style={styles.importantRow}>
             <Text style={styles.label}>📅 Pago</Text>
-            <Text style={styles.value}>5 – 8 agosto 2025</Text>
+            <Text style={styles.value}>17 – 21 agosto 2026</Text>
           </View>
 
           <View style={styles.importantRow}>
             <Text style={styles.label}>📄 Entrega de documentos</Text>
-            <Text style={styles.value}>11 – 15 agosto 2025</Text>
+            <Text style={styles.value}>10 – 14 agosto 2026</Text>
           </View>
 
           <View style={styles.importantRow}>
             <Text style={styles.label}>📚 Carga de materias</Text>
-            <Text style={styles.value}>18 – 22 agosto 2025</Text>
+            <Text style={styles.value}>17 – 21 agosto 2026</Text>
           </View>
         </View>
 
