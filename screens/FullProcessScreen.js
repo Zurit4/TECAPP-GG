@@ -36,47 +36,62 @@ export default function FullProcessScreen() {
   const steps = [
     {
       title: 'Solicitud del aspirante',
-      dates: '24 febrero - 11 junio 2025',
+      dates: '23 febrero - 3 julio 2026',
       desc: 'Registro en el SIE con datos personales, académicos y generación de preficha.',
     },
     {
       title: 'Pago de derecho al proceso',
-      dates: '24 febrero - 11 junio 2025',
+      dates: '23 febrero - 10 julio 2026',
       desc: 'Pago de $900.00 MXN en bancos autorizados o ventanilla del Instituto.',
     },
     {
       title: 'Ficha de examen',
-      dates: '24 febrero - 11 junio 2025',
+      dates: '23 febrero - 10 julio 2026',
       desc: 'Subir fotografía y descargar ficha en el SIE, entregar copias en Servicios Escolares.',
     },
     {
       title: 'Examen de admisión',
-      dates: '18 julio 2025',
+      dates: '11 julio 2026 - 17:00 a 20:00 hrs' ,
       desc: 'Examen en línea mediante la plataforma EVALUATEC.',
     },
-    {
-      title: 'Curso de homogeneización',
-      dates: '7 - 18 julio 2025',
+     {
+      title: 'Curso de homogeneización escolarizado',
+      dates: '6 - 17 julio 2026',
       desc: 'Pago de $1,500.00 MXN y asistencia presencial obligatoria.',
     },
     {
+      title: 'Curso de homogeneización sabatino',
+      dates: '4,11,18,25 julio 2026',
+      desc: 'Pago de $1,000.00 MXN y asistencia presencial obligatoria.',
+    },
+     {
+      title: 'Curso de homogeneización extención Loma Bonita',
+      dates: '4,11,18,25 julio 2025',
+      desc: 'Pago de $1,500.00 MXN y asistencia virtual obligatoria.',
+    },
+    {
+      title: 'Curso de induccion en linea para todas las modalidades',
+      dates: '20 - 26 julio 2026',
+      desc: 'Asistencia virtual obligatoria, plataforma virtual/google classroom, contar con correo dominio gmail.',
+    },
+    {
       title: 'Pago de inscripción',
-      dates: '5 - 8 agosto 2025',
-      desc: 'Pago de $2,100.00 MXN y entrega de documentos requeridos.',
+      dates: '17 - 21 agosto 2026',
+      desc: 'Pago de $2,100.00 MXN escolarizado, $3,500.00 MXN escolarizado sabatino y entrega de documentos requeridos.',
     },
     {
       title: 'Entrega de documentos',
-      dates: '11 - 15 agosto 2025',
+      dates: '10 - 14 agosto 2026',
       desc: 'Incluye certificado, CURP, acta de nacimiento, entre otros.',
     },
     {
       title: 'Inscripción',
-      dates: '18 - 22 agosto 2025',
+      dates: '17- 21 agosto 2026',
       desc: 'Carga de materias por Servicios Escolares.',
     },
     {
       title: 'Inicio de clases',
-      dates: '25 agosto 2025',
+      dates: '25 agosto 2026',
       desc: 'Presentarse según el horario asignado.',
     },
   ];
