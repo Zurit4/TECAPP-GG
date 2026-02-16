@@ -45,7 +45,7 @@ export default function AnnouncementScreen() {
         {[
           ['Registro y pago', '23 febrero – 03 julio 2026'],
           ['Examen de admisión', '11 julio 2026'],
-          ['Resultados', '5 agosto 2026'],
+          ['Resultados', 'Se recomienda revisar constantemente el portal oficial'],
           ['Inscripciones', '17 – 21 agosto 2026'],
           ['Inicio de clases', '24 agosto 2026'],
         ].map((item, index) => (
