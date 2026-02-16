@@ -27,12 +27,12 @@ export default function AnnouncementScreen() {
   return (
     <Animated.View style={[BaseStyles.container, { opacity: fadeAnim }]}>
       <ScrollView contentContainerStyle={BaseStyles.scrollContainer}>
-        <Text style={BaseStyles.title}>Convocatoria de Admisión 2025</Text>
+        <Text style={BaseStyles.title}>Convocatoria de Admisión 2026</Text>
 
         {/* HERO */}
         <View style={styles.heroCard}>
           <Text style={styles.heroTitle}>Semestre</Text>
-          <Text style={styles.heroSubtitle}>Agosto – Diciembre 2025</Text>
+          <Text style={styles.heroSubtitle}>Agosto – Diciembre 2026</Text>
           <Text style={styles.heroText}>
             El Tecnológico Nacional de México Campus Tuxtepec invita a los aspirantes
             a participar en el proceso de admisión.
@@ -43,11 +43,11 @@ export default function AnnouncementScreen() {
         <Text style={styles.blockTitle}>Fechas importantes</Text>
 
         {[
-          ['Registro y pago', '24 febrero – 11 junio 2025'],
-          ['Examen de admisión', '18 julio 2025'],
-          ['Resultados', '5 agosto 2025'],
-          ['Inscripciones', '5 – 22 agosto 2025'],
-          ['Inicio de clases', '25 agosto 2025'],
+          ['Registro y pago', '23 febrero – 03 julio 2026'],
+          ['Examen de admisión', '11 julio 2026'],
+          ['Resultados', 'Se recomienda revisar constantemente el portal oficial'],
+          ['Inscripciones', '17 – 21 agosto 2026'],
+          ['Inicio de clases', '24 agosto 2026'],
         ].map((item, index) => (
           <View key={index} style={styles.dateCard}>
             <View style={styles.dateDot} />
