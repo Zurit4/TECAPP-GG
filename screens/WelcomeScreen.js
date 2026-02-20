@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, Animated } from 'react-native';
+import ExternalLinkModal from '../components/ExternalLinkModal';
+
 
 
 import IttuxLogo from '../components/img/ittuxtr.png';
 
 export default function WelcomeScreen({ navigation }) {
   const fadeAnim = useState(new Animated.Value(0))[0];
+  const modalRef = useRef();
 
   useEffect(() => {
     Animated.timing(fadeAnim, {
@@ -15,7 +18,16 @@ export default function WelcomeScreen({ navigation }) {
     }).start();
   }, []);
 
+  const openMaps = () => {
+    modalRef.current?.open(
+          'https://www.google.com/maps/search/?api=1&query=TecNM+Campus+Tuxtepec',
+    );
+  };
+    
+
+
   return (
+    <>
     <Animated.View style={[styles.container, { opacity: fadeAnim }]}> 
       <Image 
         source={IttuxLogo}   
@@ -23,7 +35,7 @@ export default function WelcomeScreen({ navigation }) {
         resizeMode="contain"
       />
       <Text style={styles.title}>Bienvenido a TECNM Tuxtepec</Text>
-      <Text style={styles.subtitle}>Proceso de Admisión 2025</Text>
+      <Text style={styles.subtitle}>Proceso de Admisión 2026</Text>
       <TouchableOpacity 
         style={styles.greenButton}
         onPress={() => navigation.navigate('Home')}
@@ -31,7 +43,17 @@ export default function WelcomeScreen({ navigation }) {
       >
         <Text style={styles.buttonText}>Empezar</Text>
       </TouchableOpacity>
+    {/* Footer con dirección y enlace a Google Maps */}
+    <View style={styles.footer}>
+      <TouchableOpacity onPress={openMaps} activeOpacity={0.7}>
+        <Text style={styles.address}>Calzada Dr. Víctor Bravo Ahuja Num. 561, Col. Predio el Paraíso, C.P. 68350, San Juan Bautista Tuxtepec,Oaxaca
+        </Text>
+      </TouchableOpacity>
+    </View>
     </Animated.View>
+
+    <ExternalLinkModal ref={modalRef} />
+    </>
   );
 }
 
@@ -78,5 +100,18 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#FFFFFF',
     fontFamily: 'Montserrat-SemiBold',
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 25,
+    paddingHorizontal: 25,
+  },
+  address: {
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 12,
+    color: '#2C5F8B',
+    opacity: 0.8,
+    textAlign: 'center',
+    lineHeight: 16,
   },
 });

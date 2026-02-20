@@ -7,6 +7,7 @@ import {
   Animated,
   StyleSheet,
   Linking,
+  Image,
 } from 'react-native';
 
 import { BaseStyles } from '../styles/BaseStyles';
@@ -53,31 +54,58 @@ export default function ContactScreen() {
 
         {/* HORARIO */}
         <View style={BaseStyles.highlightBox}>
-          <Text style={BaseStyles.highlightTitle}>Horario de atención</Text>
+          <Text style={BaseStyles.highlightTitle}>Horario de atención 🕔</Text>
           <Text style={BaseStyles.highlightText}>
             Lunes a viernes de 9:00 a 17:00 hrs.
           </Text>
         </View>
 
-        {/* DEPARTAMENTOS */}
-        <View style={BaseStyles.card}>
-          <Text style={BaseStyles.sectionTitle}>Departamentos</Text>
+{/* DEPARTAMENTOS */}
+<View style={BaseStyles.card}>
+  <Text style={BaseStyles.sectionTitle}>Departamentos</Text>
 
-          <View style={styles.deptItem}>
-            <Text style={styles.deptName}>Servicios Escolares</Text>
-            <Text style={styles.deptInfo}>287 875 1000 Ext. 2001</Text>
-          </View>
+  {/* Servicios Escolares */}
+  <View style={styles.deptItem}>
+    <Image
+      source={require('../assets/icons/servi.png')}
+      style={styles.backgroundIcon}
+      resizeMode="contain"
+    />
 
-          <View style={styles.deptItem}>
-            <Text style={styles.deptName}>Desarrollo Académico</Text>
-            <Text style={styles.deptInfo}>287 875 1000 Ext. 2002</Text>
-          </View>
+    <View>
+      <Text style={styles.deptName}>Servicios Escolares</Text>
+      <Text style={styles.deptInfo}>287 875 1000 Ext. 2001</Text>
+    </View>
+  </View>
 
-          <View style={styles.deptItem}>
-            <Text style={styles.deptName}>Recursos Financieros</Text>
-            <Text style={styles.deptInfo}>287 875 1000 Ext. 2003</Text>
-          </View>
-        </View>
+  {/* Desarrollo Académico */}
+  <View style={styles.deptItem}>
+    <Image
+      source={require('../assets/icons/desa.png')}
+      style={styles.backgroundIcon}
+      resizeMode='contain'
+    />
+
+    <View>
+      <Text style={styles.deptName}>Desarrollo Académico</Text>
+      <Text style={styles.deptInfo}>287 875 1000 Ext. 2002</Text>
+    </View>
+  </View>
+
+  {/* Recursos Financieros */}
+  <View style={styles.deptItem}>
+    <Image
+      source={require('../assets/icons/recu.png')}
+      style={styles.backgroundIcon}
+      resizeMode="contain"
+    />
+
+    <View>
+      <Text style={styles.deptName}>Recursos Financieros</Text>
+      <Text style={styles.deptInfo}>287 875 1000 Ext. 2003</Text>
+    </View>
+  </View>
+</View>
 
         {/* BOTONES DE CONTACTO */}
         <View style={styles.actionsBox}>
@@ -125,27 +153,6 @@ const styles = StyleSheet.create({
     color: '#333',
     lineHeight: 22,
   },
-
-  deptItem: {
-    backgroundColor: '#F4F8FB',
-    borderRadius: 8,
-    padding: 12,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#2C5F8B',
-  },
-  deptName: {
-    fontFamily: 'Montserrat-SemiBold',
-    fontSize: 15,
-    color: '#2C5F8B',
-  },
-  deptInfo: {
-    fontFamily: 'Montserrat-Regular',
-    fontSize: 14,
-    color: '#333',
-    marginTop: 2,
-  },
-
   actionsBox: {
     marginTop: 10,
     marginBottom: 20,
@@ -182,4 +189,37 @@ const styles = StyleSheet.create({
     color: '#555',
     textAlign: 'center',
   },
+
+  deptItem: {
+  backgroundColor: '#F4F8FB',
+  borderRadius: 12,
+  padding: 18,
+  marginBottom: 14,
+  borderWidth: 1,
+  borderColor: '#2C5F8B',
+  overflow: 'hidden',
+  position: 'relative',
+},
+
+backgroundIcon: {
+  position: 'absolute',
+  right: 10,
+  bottom: -20,
+  width: 100,
+  height: 110,
+  opacity: 0.30, 
+},
+
+deptName: {
+  fontFamily: 'Montserrat-SemiBold',
+  fontSize: 16,
+  color: '#2C5F8B',
+},
+
+deptInfo: {
+  fontFamily: 'Montserrat-Regular',
+  fontSize: 14,
+  color: '#333',
+  marginTop: 4,
+},
 });

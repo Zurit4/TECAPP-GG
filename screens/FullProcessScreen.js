@@ -99,7 +99,7 @@ export default function FullProcessScreen() {
   return (
     <Animated.View style={[BaseStyles.container, { opacity: fadeAnim }]}>
       <ScrollView contentContainerStyle={BaseStyles.scrollContainer}>
-        <Text style={BaseStyles.title}>Proceso Completo de Admisión 2025</Text>
+        <Text style={BaseStyles.title}>Proceso Completo de Admisión 2026</Text>
 
         {steps.map((step, index) => {
           const isOpen = openStep === index;
