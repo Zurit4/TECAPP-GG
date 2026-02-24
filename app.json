@@ -2,7 +2,7 @@
   "expo": {
     "name": "Aspirantes Ittux",
     "slug": "ittux-aspirantes",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "orientation": "portrait",
     "icon": "./assets/iconoapp.png",
     "userInterfaceStyle": "light",
@@ -17,7 +17,7 @@
     },
     "android": {
       "package": "com.ittux.aspirantes",
-      "versionCode": 8,
+      "versionCode": 9,
       "adaptiveIcon": {
         "foregroundImage": "./assets/iconoapp.png",
         "backgroundColor": "#ffffff"
