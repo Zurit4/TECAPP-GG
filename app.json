@@ -28,7 +28,7 @@
         "projectId": "92b9d299-f5ad-4494-84ee-2ca0b869fa55"
       }
     },
-    "owner": "hawuelo",
+    "owner": "ittux-app",
     "plugins": [
       "expo-font"
     ]
@@ -38,8 +38,8 @@
   },
   "extra": {
     "eas": {
-      "projectId": "9aa0ecdc-a504-4bfe-9e6c-59a96711ee09"
+      "projectId": "92b9d299-f5ad-4494-84ee-2ca0b869fa55"
     }
   },
-  "owner": "hawuelo"
+  "owner": "ittux-app"
 }
