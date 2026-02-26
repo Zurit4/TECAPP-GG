@@ -19,72 +19,82 @@ const Stack = createStackNavigator();
 
 export default function AppNavigator() {
   return (
-    <Stack.Navigator>
-      {/* Bienvenida */}
-      <Stack.Screen 
-        name="Welcome" 
-        component={WelcomeScreen} 
-        options={{ headerShown: false }} 
-      />
+<Stack.Navigator>
 
-      {/* Menú principal */}
-      <Stack.Screen 
-        name="Home" 
-        component={HomeScreen} 
-        options={{ headerShown: false }} 
-      />
+  {/* Bienvenida */}
+  <Stack.Screen 
+    name="Welcome" 
+    component={WelcomeScreen} 
+    options={{ headerShown: false }} 
+  />
 
-      {/* Secciones */}
-      <Stack.Screen 
-        name="FullProcess" 
-        component={FullProcessScreen} 
-        options={{ title: 'Proceso Completo' }} 
-      />
-      <Stack.Screen 
-        name="Announcement" 
-        component={AnnouncementScreen} 
-        options={{ title: 'Convocatoria' }} 
-      />
-      <Stack.Screen 
-        name="CareerGuide" 
-        component={CareerGuideScreen} 
-        options={{ title: 'Guía de Carreras' }} 
-      />
-      <Stack.Screen 
-        name="EducationalOffer" 
-        component={EducationalOfferScreen} 
-        options={{ title: 'Oferta Educativa' }} 
-      />
-      <Stack.Screen 
-        name="SIEAccess" 
-        component={SIEAccessScreen} 
-        options={{ title: 'Acceso al SIE' }} 
-      />
-      <Stack.Screen 
-        name="PaymentProcess" 
-        component={PaymentProcessScreen} 
-        options={{ title: 'Pago de Ficha' }} 
-      />
-      <Stack.Screen 
-        name="AdmissionExam" 
-        component={AdmissionExamScreen} 
-        options={{ title: 'Examen de Admisión' }} 
-      />
-      <Stack.Screen 
-        name="Homogenization" 
-        component={HomogenizationScreen} 
-        options={{ title: 'Homogeneización' }} 
-      />
-      <Stack.Screen 
-        name="Enrollment" 
-        component={EnrollmentScreen} 
-        options={{ title: 'Inscripción' }} 
-      />
-      <Stack.Screen 
-        name="Contact" 
-        component={ContactScreen} 
-        options={{ title: 'Contacto' }} 
-      />
+  {/* Menú principal */}
+  <Stack.Screen 
+    name="Home" 
+    component={HomeScreen} 
+    options={{ headerShown: false }} 
+  />
+
+  {/* Secciones en orden correcto */}
+  <Stack.Screen 
+    name="Announcement" 
+    component={AnnouncementScreen} 
+    options={{ title: 'Convocatoria' }} 
+  />
+
+  <Stack.Screen 
+    name="EducationalOffer" 
+    component={EducationalOfferScreen} 
+    options={{ title: 'Oferta Educativa' }} 
+  />
+
+  <Stack.Screen 
+    name="CareerGuide" 
+    component={CareerGuideScreen} 
+    options={{ title: 'Guía de Carreras' }} 
+  />
+
+  <Stack.Screen 
+    name="FullProcess" 
+    component={FullProcessScreen} 
+    options={{ title: 'Proceso Completo' }} 
+  />
+
+  <Stack.Screen 
+    name="PaymentProcess" 
+    component={PaymentProcessScreen} 
+    options={{ title: 'Pago de Ficha' }} 
+  />
+
+  <Stack.Screen 
+    name="AdmissionExam" 
+    component={AdmissionExamScreen} 
+    options={{ title: 'Examen de Admisión' }} 
+  />
+
+  <Stack.Screen 
+    name="Homogenization" 
+    component={HomogenizationScreen} 
+    options={{ title: 'Homogeneización' }} 
+  />
+
+  <Stack.Screen 
+    name="Enrollment" 
+    component={EnrollmentScreen} 
+    options={{ title: 'Inscripción' }} 
+  />
+
+  <Stack.Screen 
+    name="SIEAccess" 
+    component={SIEAccessScreen} 
+    options={{ title: 'Acceso al SIE' }} 
+  />
+
+  <Stack.Screen 
+    name="Contact" 
+    component={ContactScreen} 
+    options={{ title: 'Contacto' }} 
+  />
     </Stack.Navigator>
   );
 }

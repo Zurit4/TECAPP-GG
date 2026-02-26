@@ -10,15 +10,15 @@ import PagoFicha from '../components/img/pagodeficha.png';
 import accesosie from '../components/img/accesosie.png';
 
 export const allOptions = [
-  { title: 'Proceso Completo', image: Bienvenidaittux, screenName: 'FullProcess', color: '#ffffffff' },
   { title: 'Convocatoria', image: Convo, screenName: 'Announcement', color: '#ffffffff' },
-  { title: 'Guía de Carreras', image: CareerGuide, screenName: 'CareerGuide', color: '#ffffffff' },
   { title: 'Oferta Educativa', image: OfertaEdu, screenName: 'EducationalOffer', color: '#ffffffff' },
-  { title: 'Acceso al SIE', image: accesosie, screenName: 'SIEAccess', color: '#ffffffff' },
+  { title: 'Guía de Carreras', image: CareerGuide, screenName: 'CareerGuide', color: '#ffffffff' },
+  { title: 'Proceso Completo', image: Bienvenidaittux, screenName: 'FullProcess', color: '#ffffffff' },
   { title: 'Pago de Ficha', image: PagoFicha, screenName: 'PaymentProcess', color: '#ffffffff' },
   { title: 'Examen de Admisión', image: ExamenAdmision, screenName: 'AdmissionExam', color: '#ffffffff' },
   { title: 'Homogeneización', image: CursoHomogeneizacion, screenName: 'Homogenization', color: '#ffffffff' },
   { title: 'Inscripción', image: Inscripcion, screenName: 'Enrollment', color: '#ffffffff' },
+  { title: 'Acceso al SIE', image: accesosie, screenName: 'SIEAccess', color: '#ffffffff' },
   { title: 'Contacto', image: Contacto, screenName: 'Contact', color: '#ffffffff' }
   
 ];
