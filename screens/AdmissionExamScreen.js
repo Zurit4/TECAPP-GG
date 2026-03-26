@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { Image } from 'react-native';
 import {
   ScrollView,
   Text,
   StyleSheet,
   TouchableOpacity,
   View,
+  
 } from 'react-native';
 
 import InfoItem from '../components/InfoItem';
@@ -15,6 +17,14 @@ import { BaseStyles } from '../styles/BaseStyles';
 
 export default function AdmissionExamScreen() {
   const modalRef = useRef(null);
+  const StepItem = ({ text }) => (
+  <View style={styles.stepItem}>
+    <View style={styles.stepIcon}>
+      <Text style={styles.stepIconText}>✔</Text>
+    </View>
+    <Text style={styles.stepText}>{text}</Text>
+  </View>
+);
 
   return (
     <ScrollView
@@ -26,78 +36,69 @@ export default function AdmissionExamScreen() {
 
       {/* INTRO */}
       <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>
-          ¿En qué consiste el examen?
-        </Text>
+        <Text style={BaseStyles.sectionTitle}>¿En qué consiste?</Text>
         <Text style={BaseStyles.text}>
-          Es una evaluación en línea obligatoria para ingresar al TecNM Tuxtepec.
+          Evaluación en línea obligatoria para ingresar al Instituto Tecnológico de Tuxtepec.
         </Text>
       </View>
 
-      {/* INFORMACIÓN CLAVE */}
-      <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>Información importante</Text>
+      {/* BLOQUE DESTACADO */}
+      <View style={styles.highlightCard}>
+        <Text style={styles.highlightTitle}>⚠️ IMPORTANTE</Text>
+        <Text style={styles.highlightText}>11 de julio de 2026</Text>
+        <Text style={styles.highlightText}>17:00 a 20:00 hrs</Text>
 
-        <InfoItem text="Fecha: 11 de julio de 2026" />
-        <InfoItem text="Horario: 17:00 a 20:00 hrs" />
-        <InfoItem text="Duración fija, inicia automáticamente" />
-        <InfoItem text="Resultados: 4 de agosto de 2026" />
+        <Text style={styles.highlightNote}>
+          Es el único horario disponible para realizar el examen.
+        </Text>
       </View>
 
-      {/* ACCESO AL EXAMEN */}
+      {/* ACCESO */}
       <View style={BaseStyles.card}>
         <Text style={BaseStyles.sectionTitle}>Acceso al examen</Text>
 
-        <InfoItem text="Ingresar con tu número de ficha (folio)" />
-        <InfoItem text="Contraseña: tu CURP" />
+        <InfoItem text="Usuario: Número de ficha (folio)" />
+        <InfoItem text="Contraseña: CURP" />
 
         <TouchableOpacity
-          style={styles.actionButton}
+          style={styles.primaryButton}
           onPress={() =>
             modalRef.current.open(
               'https://tuxtepec.evaluatec.tecnm.mx'
             )
           }
         >
-          <Text style={styles.actionText}>
-            Ir a la plataforma EVALUATEC
+          <Text style={styles.primaryText}>
+            Entrar a EVALUATEC
           </Text>
         </TouchableOpacity>
       </View>
 
       {/* RECOMENDACIONES */}
       <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>Recomendaciones</Text>
+  <Text style={BaseStyles.sectionTitle}>Recomendaciones</Text>
 
-        <InfoItem text="Conectarte 15 minutos antes" />
-        <InfoItem text="Usar computadora (no celular)" />
-        <InfoItem text="Internet estable (no WiFi inestable)" />
-        <InfoItem text="Usar Google Chrome" />
-      </View>
+  <StepItem text="Conectarte 15 minutos antes" />
+  <StepItem text="Usar computadora (no celular)" />
+  <StepItem text="Internet estable (evitar WiFi)" />
+  <StepItem text="Usar Google Chrome" />
 
-      {/* REQUISITOS */}
-      <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>
-          Requisitos
-        </Text>
-
-        <InfoItem text="Ficha de examen impresa" />
-        <InfoItem text="Cámara funcional" />
-        <InfoItem text="Navegador actualizado" />
-      </View>
+  <Text style={styles.noteText}>
+    El examen inicia automáticamente, si entras tarde tendrás menos tiempo.
+  </Text>
+</View>
 
       {/* ÁREAS */}
-      <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>
-          Áreas del examen
-        </Text>
+<View style={BaseStyles.card}>
+  <Text style={BaseStyles.sectionTitle}>Áreas del examen</Text>
 
-        <InfoItem text="Comprensión lectora" />
-        <InfoItem text="Estructura del lenguaje" />
-        <InfoItem text="Pensamiento analítico" />
-        <InfoItem text="Matemáticas" />
-        <InfoItem text="Lógica matemática" />
-      </View>
+  <StepItem text="Estructura del lenguaje" />
+  <StepItem text="Comprensión lectora" />
+  <StepItem text="Pensamiento analítico" />
+  <StepItem text="Matemáticas" />
+  <StepItem text="Lógica matemática" />
+  <StepItem text="Habilidad matemática" />
+</View>
 
       {/* TEMARIOS */}
       <View style={BaseStyles.card}>
@@ -117,27 +118,44 @@ export default function AdmissionExamScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* VIDEO DEMO */}
-      <View style={BaseStyles.card}>
-        <Text style={BaseStyles.sectionTitle}>Video demostrativo</Text>
+      {/* VIDEO */}
+<View style={BaseStyles.card}>
+  <Text style={BaseStyles.sectionTitle}>Video guía</Text>
 
-        <TouchableOpacity
-          style={styles.secondaryButton}
-          onPress={() =>
-            modalRef.current.open(
-              'https://www.youtube.com/watch?v=x5F9Rqr5-SM'
-            )
-          }
-        >
-          <Text style={styles.secondaryText}>
-            Ver cómo usar la plataforma
-          </Text>
-        </TouchableOpacity>
+  <TouchableOpacity
+    style={styles.videoContainer}
+    onPress={() =>
+      modalRef.current.open(
+        'https://www.youtube.com/watch?v=x5F9Rqr5-SM'
+      )
+    }
+    activeOpacity={0.8}
+  >
+    <Image
+      source={{
+        uri: 'https://img.youtube.com/vi/x5F9Rqr5-SM/hqdefault.jpg',
+      }}
+      style={styles.videoThumbnail}
+    />
+
+    <View style={styles.playOverlay}>
+      <Text style={styles.playIcon}>▶</Text>
+    </View>
+  </TouchableOpacity>
+</View>
+
+      {/* RESULTADOS */}
+      <View style={BaseStyles.card}>
+        <Text style={BaseStyles.sectionTitle}>Resultados</Text>
+
+        <Text style={BaseStyles.text}>
+          4 de agosto de 2026 en medios oficiales del Instituto.
+        </Text>
       </View>
 
-      {/* AVISO */}
+      {/* AVISO FINAL */}
       <WarningCard
-        text="Es obligatorio presentar el examen en la fecha indicada.
+        text="Es obligatorio presentar el examen.
 Si no lo realizas, deberás comunicarte al correo:
 fichas_desarrollo@tuxtepec.tecnm.mx"
       />
@@ -152,18 +170,76 @@ const styles = StyleSheet.create({
     padding: 16,
     paddingBottom: 80,
   },
-  actionButton: {
+  videoContainer: {
+  height: 180,
+  borderRadius: 12,
+  overflow: 'hidden',
+  marginTop: 10,
+},
+
+videoThumbnail: {
+  width: '100%',
+  height: '100%',
+},
+
+playOverlay: {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'rgba(0,0,0,0.4)',
+},
+
+playIcon: {
+  fontSize: 40,
+  color: '#FFF',
+},
+
+  highlightCard: {
+    backgroundColor: '#2C5F8B',
+    padding: 18,
+    borderRadius: 12,
+    marginBottom: 15,
+  },
+  highlightTitle: {
+    color: '#FFF',
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginBottom: 6,
+  },
+  highlightText: {
+    color: '#FFF',
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  highlightNote: {
+    color: '#E8F4F8',
+    marginTop: 8,
+    fontSize: 13,
+  },
+
+  noteText: {
+    marginTop: 8,
+    color: '#555',
+    fontSize: 13,
+  },
+
+  primaryButton: {
     backgroundColor: '#2C5F8B',
     paddingVertical: 14,
     borderRadius: 10,
     alignItems: 'center',
     marginTop: 15,
   },
-  actionText: {
+  primaryText: {
     color: '#FFF',
-    fontSize: 16,
     fontWeight: '700',
+    fontSize: 16,
   },
+
   secondaryButton: {
     backgroundColor: '#3A7D44',
     paddingVertical: 12,
@@ -175,4 +251,48 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontWeight: '600',
   },
+
+  videoButton: {
+    backgroundColor: '#000',
+    paddingVertical: 14,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginTop: 10,
+  },
+  videoText: {
+    color: '#FFF',
+    fontWeight: '700',
+  },
+  stepItem: {
+  flexDirection: 'row',
+  alignItems: 'center',
+  backgroundColor: '#F0F6FA',
+  padding: 12,
+  borderRadius: 10,
+  marginTop: 8,
+  borderLeftWidth: 4,
+  borderLeftColor: '#2C5F8B',
+},
+
+stepIcon: {
+  width: 28,
+  height: 28,
+  borderRadius: 14,
+  backgroundColor: '#2C5F8B',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginRight: 10,
+},
+
+stepIconText: {
+  color: '#FFF',
+  fontWeight: 'bold',
+},
+
+stepText: {
+  flex: 1,
+  fontSize: 15,
+  color: '#333',
+  fontWeight: '500',
+},
 });

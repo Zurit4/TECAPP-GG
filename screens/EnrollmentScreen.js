@@ -5,15 +5,17 @@ import {
   ScrollView,
   Animated,
   StyleSheet,
+  TouchableOpacity
 } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 import InfoItem from '../components/InfoItem';
 import WarningCard from '../components/WarningCard';
 import { BaseStyles } from '../styles/BaseStyles';
 
 export default function EnrollmentScreen() {
   const fadeAnim = useState(new Animated.Value(0))[0];
-
+  const navigation = useNavigation();
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
@@ -54,6 +56,14 @@ export default function EnrollmentScreen() {
             </Text>
             <Text style={styles.costValueHigh}>$3,500.00 MXN</Text>
           </View>
+          <TouchableOpacity
+  style={styles.paymentButton}
+  onPress={() => navigation.navigate('PaymentProcess')}
+>
+  <Text style={styles.paymentButtonText}>
+    Ver cómo pagar la ficha
+  </Text>
+</TouchableOpacity>
         </View>
 
         {/* FECHAS (TIMELINE) */}
@@ -181,6 +191,27 @@ const styles = StyleSheet.create({
     color: '#2C5F8B',
     marginBottom: 15,
   },
+  paymentButton: {
+  backgroundColor: '#2C5F8B',
+  paddingVertical: 12,
+  borderRadius: 10,
+  alignItems: 'center',
+  marginTop: 15,
+},
+
+paymentButtonSecondary: {
+  backgroundColor: '#3A7D44',
+  paddingVertical: 10,
+  borderRadius: 10,
+  alignItems: 'center',
+  marginTop: 10,
+},
+
+paymentButtonText: {
+  color: '#FFF',
+  fontFamily: 'Montserrat-Bold',
+  fontSize: 15,
+},
 
   costCard: {
     backgroundColor: '#FFF',

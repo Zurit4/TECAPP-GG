@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Animated,
+  Image,
 } from 'react-native';
 import ExternalLinkModal from '../components/ExternalLinkModal';
 
@@ -60,13 +61,34 @@ export default function SIEAccessScreen() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.stepCard}>
-          <Text style={styles.stepTitle}>Paso 2 · Captura de datos</Text>
-          <Text style={styles.stepText}>
-            Captura tus DATOS GENERALES dando clic en la opción
-            “Modificar datos”.
-          </Text>
-        </View>
+<View style={styles.stepCard}>
+  <Text style={styles.stepTitle}>Paso 2 · Captura de datos</Text>
+
+  <Text style={styles.stepText}>
+    Captura tus DATOS GENERALES dando clic en la opción
+    “Modificar datos”.
+  </Text>
+
+  {/* VIDEO MINIATURA */}
+  <TouchableOpacity
+    style={styles.videoContainer}
+    onPress={() =>
+      openLink('https://youtu.be/DAlzRK-yfhM')
+    }
+    activeOpacity={0.8}
+  >
+<Image
+  source={{
+    uri: 'https://img.youtube.com/vi/DAlzRK-yfhM/hqdefault.jpg',
+  }}
+  style={{ width: '100%', height: '100%' }}
+/>
+
+    <View style={styles.playOverlay}>
+      <Text style={styles.playIcon}>▶</Text>
+    </View>
+  </TouchableOpacity>
+</View>
 
         <View style={styles.stepCard}>
           <Text style={styles.stepTitle}>Paso 3 · Solicitar pre-ficha</Text>
@@ -169,6 +191,41 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#3A7D44',
   },
+  videoContainer: {
+  height: 170,
+  borderRadius: 12,
+  overflow: 'hidden',
+  marginTop: 12,
+},
+
+videoThumbnailFake: {
+  flex: 1,
+  backgroundColor: '#2C5F8B',
+  justifyContent: 'center',
+  alignItems: 'center',
+},
+
+videoLabel: {
+  color: '#FFF',
+  fontSize: 16,
+  fontFamily: 'Montserrat-SemiBold',
+},
+
+playOverlay: {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: 'rgba(0,0,0,0.35)',
+},
+
+playIcon: {
+  fontSize: 40,
+  color: '#FFF',
+},
 
   stepCard: {
     backgroundColor: '#FFF',
