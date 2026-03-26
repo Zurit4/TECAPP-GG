@@ -39,32 +39,51 @@ export default function EnrollmentScreen() {
           </Text>
         </View>
 
-        {/* FECHAS Y COSTO */}
+        {/* COSTOS */}
         <View style={styles.importantCard}>
-          <Text style={styles.importantTitle}>Fechas y costo</Text>
+          <Text style={styles.importantTitle}>💰 Costos de inscripción</Text>
 
-          <View style={styles.importantRow}>
-            <Text style={styles.label}>💵 Costo de inscripción</Text>
-            <Text style={styles.value}>$2,100.00 MXN</Text>
+          <View style={styles.costCard}>
+            <Text style={styles.costLabel}>Modalidad Escolarizada</Text>
+            <Text style={styles.costValue}>$2,100.00 MXN</Text>
           </View>
 
-          <View style={styles.importantRow}>
-            <Text style={styles.label}>📅 Pago</Text>
-            <Text style={styles.value}>17 – 21 agosto 2026</Text>
-          </View>
-
-          <View style={styles.importantRow}>
-            <Text style={styles.label}>📄 Entrega de documentos</Text>
-            <Text style={styles.value}>10 – 14 agosto 2026</Text>
-          </View>
-
-          <View style={styles.importantRow}>
-            <Text style={styles.label}>📚 Carga de materias</Text>
-            <Text style={styles.value}>17 – 21 agosto 2026</Text>
+          <View style={styles.costCard}>
+            <Text style={styles.costLabel}>
+              Escolarizado Sabatino y Extensión Loma Bonita
+            </Text>
+            <Text style={styles.costValueHigh}>$3,500.00 MXN</Text>
           </View>
         </View>
 
-        {/* CARGA DE MATERIAS */}
+        {/* FECHAS (TIMELINE) */}
+        <Text style={styles.sectionHeader}>Fechas importantes</Text>
+
+        <View style={styles.dateCard}>
+          <Text style={styles.dateIcon}>💳</Text>
+          <View style={styles.dateContent}>
+            <Text style={styles.dateTitle}>Pago</Text>
+            <Text style={styles.dateText}>17 - 21 agosto 2026</Text>
+          </View>
+        </View>
+
+        <View style={styles.dateCard}>
+          <Text style={styles.dateIcon}>📂</Text>
+          <View style={styles.dateContent}>
+            <Text style={styles.dateTitle}>Entrega de documentos</Text>
+            <Text style={styles.dateText}>10 - 14 agosto 2026</Text>
+          </View>
+        </View>
+
+        <View style={styles.dateCard}>
+          <Text style={styles.dateIcon}>📚</Text>
+          <View style={styles.dateContent}>
+            <Text style={styles.dateTitle}>Carga de materias</Text>
+            <Text style={styles.dateText}>17 - 21 agosto 2026</Text>
+          </View>
+        </View>
+
+        {/* INFO EXTRA */}
         <View style={BaseStyles.card}>
           <Text style={BaseStyles.sectionTitle}>Carga de materias</Text>
           <Text style={BaseStyles.text}>
@@ -109,16 +128,13 @@ export default function EnrollmentScreen() {
           </View>
         </View>
 
-        {/* AVISO FORMATOS */}
         <WarningCard text="Los formatos oficiales de inscripción se obtienen en la copiadora del Instituto." />
 
-        {/* RECOMENDACIÓN */}
         <View style={BaseStyles.highlightBox}>
           <Text style={BaseStyles.highlightTitle}>Recomendación</Text>
           <Text style={BaseStyles.highlightText}>
             Revisa que todos tus documentos estén completos, legibles y sin
-            errores antes de entregarlos, para evitar retrasos en tu proceso
-            de inscripción.
+            errores antes de entregarlos.
           </Text>
         </View>
 
@@ -128,6 +144,7 @@ export default function EnrollmentScreen() {
 }
 
 const styles = StyleSheet.create({
+  /* INTRO */
   introCard: {
     backgroundColor: '#FFF',
     borderRadius: 12,
@@ -149,33 +166,96 @@ const styles = StyleSheet.create({
     lineHeight: 22,
   },
 
-  /* TARJETA IMPORTANTE */
+  /* COSTOS */
   importantCard: {
-    backgroundColor: '#E9F6EC',
+    backgroundColor: '#F4F8FB',
     borderRadius: 12,
     padding: 18,
     borderWidth: 2,
-    borderColor: '#1B8E36',
+    borderColor: '#2C5F8B',
     marginBottom: 20,
   },
   importantTitle: {
     fontFamily: 'Montserrat-Bold',
     fontSize: 18,
-    color: '#1B8E36',
+    color: '#2C5F8B',
+    marginBottom: 15,
+  },
+
+  costCard: {
+    backgroundColor: '#FFF',
+    padding: 15,
+    borderRadius: 10,
     marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+    borderLeftWidth: 6,
+    borderLeftColor: '#3A7D44',
+    elevation: 2,
   },
-  importantRow: {
-    marginBottom: 8,
-  },
-  label: {
+
+  costLabel: {
     fontFamily: 'Montserrat-SemiBold',
-    fontSize: 14,
-    color: '#333',
+    fontSize: 15,
+    color: '#2C5F8B',
   },
-  value: {
+
+  costValue: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 19,
+    color: '#3A7D44',
+  },
+
+  costValueHigh: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 19,
+    color: '#3A7D44',
+  },
+
+  /* FECHAS */
+  sectionHeader: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 17,
+    color: '#2C5F8B',
+    marginBottom: 10,
+    borderLeftWidth: 4,
+    borderLeftColor: '#3A7D44',
+    paddingLeft: 8,
+  },
+
+  dateCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFF',
+    padding: 14,
+    borderRadius: 10,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
+    borderLeftWidth: 5,
+    borderLeftColor: '#2C5F8B',
+    elevation: 2,
+  },
+
+  dateIcon: {
+    fontSize: 22,
+    marginRight: 12,
+  },
+
+  dateContent: {
+    flex: 1,
+  },
+
+  dateTitle: {
     fontFamily: 'Montserrat-Bold',
     fontSize: 15,
-    color: '#1B8E36',
+    color: '#2C5F8B',
+  },
+
+  dateText: {
+    fontFamily: 'Montserrat-Regular',
+    fontSize: 14,
+    color: '#555',
   },
 
   /* DOCUMENTOS */
@@ -187,6 +267,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#2C5F8B',
   },
+
   docText: {
     fontFamily: 'Montserrat-Regular',
     fontSize: 15,

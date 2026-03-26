@@ -62,11 +62,11 @@ export default function FullProcessScreen() {
     {
       title: 'Curso de homogeneización sabatino',
       dates: '4,11,18,25 julio 2026',
-      desc: 'Pago de $1,000.00 MXN y asistencia presencial obligatoria.',
+      desc: 'Pago de $1,500.00 MXN y asistencia presencial obligatoria.',
     },
      {
       title: 'Curso de homogeneización extención Loma Bonita',
-      dates: '4,11,18,25 julio 2025',
+      dates: '4,11,18,25 julio 2026',
       desc: 'Pago de $1,500.00 MXN y asistencia virtual obligatoria.',
     },
     {

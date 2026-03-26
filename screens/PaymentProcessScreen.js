@@ -44,7 +44,7 @@ export default function PaymentProcessScreen() {
           </View>
 
           <View style={styles.amountRow}>
-            <Text style={styles.amountLabel}>Escolarizado Sabatino</Text>
+            <Text style={styles.amountLabel}>Escolarizado {'\n'}Sabatino</Text>
             <Text style={styles.amountValue}>$900.00 MXN</Text>
           </View>
         </View>

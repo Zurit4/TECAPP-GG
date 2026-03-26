@@ -46,7 +46,7 @@ export default function EducationalOfferScreen() {
           description="Formación integral en contabilidad, auditoría y finanzas, enfocada en la correcta gestión fiscal y financiera de organizaciones públicas y privadas, con apego a normas nacionales e internacionales."
           image={require('../assets/carreras/contador.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado, Escolarizado Sabatino y Extensión Loma Bonita',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -58,7 +58,7 @@ export default function EducationalOfferScreen() {
           description="Desarrollo de habilidades para la planeación, organización y dirección de empresas, con enfoque en recursos humanos, mercadotecnia, finanzas y toma de decisiones estratégicas."
           image={require('../assets/carreras/administracion.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado, Escolarizado Sabatino y Extensión Loma Bonita',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -76,7 +76,7 @@ export default function EducationalOfferScreen() {
           description="Aplicación de procesos biotecnológicos y químicos en áreas como alimentos, farmacéutica y medio ambiente, contribuyendo a la innovación y solución de problemas industriales."
           image={require('../assets/carreras/bioquimica.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -88,7 +88,7 @@ export default function EducationalOfferScreen() {
           description="Diseño, construcción y mantenimiento de infraestructura urbana y rural, aplicando criterios técnicos, normativos y de sostenibilidad para el desarrollo de la sociedad."
           image={require('../assets/carreras/civil.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -100,7 +100,7 @@ export default function EducationalOfferScreen() {
           description="Diseño y análisis de sistemas electrónicos, telecomunicaciones y control, orientados a la automatización, comunicaciones y desarrollo tecnológico."
           image={require('../assets/carreras/electronica.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -112,7 +112,7 @@ export default function EducationalOfferScreen() {
           description="Integración de sistemas eléctricos y mecánicos para el diseño, operación y mantenimiento de equipos industriales, con enfoque en eficiencia y productividad."
           image={require('../assets/carreras/electromecanica.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -124,7 +124,7 @@ export default function EducationalOfferScreen() {
           description="Formación profesional en administración de sistemas informáticos, redes y soluciones tecnológicas, orientada a la optimización de procesos y soporte tecnológico en organizaciones."
           image={require('../assets/carreras/informatica.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -136,7 +136,7 @@ export default function EducationalOfferScreen() {
           description="Desarrollo de competencias para la planeación estratégica, gestión de proyectos y liderazgo organizacional, integrando conocimientos administrativos y tecnológicos."
           image={require('../assets/carreras/gestion.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado, Escolarizado Sabatino y Extensión Loma Bonita',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -148,7 +148,7 @@ export default function EducationalOfferScreen() {
           description="Diseño y desarrollo de software, bases de datos, redes y soluciones computacionales, aplicando metodologías modernas para resolver problemas tecnológicos complejos."
           image={require('../assets/carreras/sistemas.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado, Escolarizado Sabatino y Extensión Loma Bonita',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
@@ -160,7 +160,7 @@ export default function EducationalOfferScreen() {
           description="Creación de aplicaciones móviles, web y de escritorio utilizando tecnologías actuales, enfocadas en la innovación, experiencia de usuario y soluciones digitales eficientes."
           image={require('../assets/carreras/desarrollo.jpg')}
           details={{
-            modalidad: 'Escolarizada',
+            modalidad: 'Escolarizado',
             turno: 'Matutino y Vespertino',
             periodicidad: 'Semestral',
             sede: 'Única (Tuxtepec)',
