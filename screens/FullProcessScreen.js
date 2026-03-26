@@ -36,17 +36,17 @@ export default function FullProcessScreen() {
   const steps = [
     {
       title: 'Solicitud del aspirante',
-      dates: '23 febrero - 3 julio 2026',
+      dates: '23 febrero - 03 julio 2026',
       desc: 'Registro en el SIE con datos personales, académicos y generación de preficha.',
     },
     {
       title: 'Pago de derecho al proceso',
-      dates: '23 febrero - 10 julio 2026',
+      dates: '23 febrero - 03 julio 2026',
       desc: 'Pago de $900.00 MXN en bancos autorizados o ventanilla del Instituto.',
     },
     {
       title: 'Ficha de examen',
-      dates: '23 febrero - 10 julio 2026',
+      dates: '23 febrero - 03 julio 2026',
       desc: 'Subir fotografía y descargar ficha en el SIE, entregar copias en Servicios Escolares.',
     },
     {

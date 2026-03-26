@@ -5,15 +5,17 @@ import {
   StyleSheet,
   ScrollView,
   Animated,
+  TouchableOpacity
 } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 import InfoItem from '../components/InfoItem';
 import WarningCard from '../components/WarningCard';
 import { BaseStyles } from '../styles/BaseStyles';
 
 export default function HomogenizationScreen() {
   const fadeAnim = useState(new Animated.Value(0))[0];
-
+  const navigation = useNavigation();
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 1,
@@ -71,6 +73,14 @@ export default function HomogenizationScreen() {
           <InfoItem text="Depósito en ventanilla bancaria" />
           <InfoItem text="Transferencia bancaria (CLABE: 014855655071720028)" />
           <InfoItem text="Pago con tarjeta en ventanilla del Instituto" />
+          <TouchableOpacity
+  style={styles.paymentButton}
+  onPress={() => navigation.navigate('PaymentProcess')}
+>
+  <Text style={styles.paymentButtonText}>
+    Ver alternativas de pago
+  </Text>
+</TouchableOpacity>
         </View>
 
         {/* COSTO */}
@@ -138,4 +148,25 @@ const styles = StyleSheet.create({
     fontSize: 22,
     color: '#1B8E36',
   },
+  paymentButton: {
+  backgroundColor: '#2C5F8B',
+  paddingVertical: 12,
+  borderRadius: 10,
+  alignItems: 'center',
+  marginTop: 15,
+},
+
+paymentButtonSecondary: {
+  backgroundColor: '#3A7D44',
+  paddingVertical: 10,
+  borderRadius: 10,
+  alignItems: 'center',
+  marginTop: 10,
+},
+
+paymentButtonText: {
+  color: '#FFF',
+  fontFamily: 'Montserrat-Bold',
+  fontSize: 15,
+},
 });
